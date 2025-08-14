@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\DetailPerizinanController;
+use App\Http\Controllers\FaqController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.beranda');
-});
+Route::get('/', [BerandaController::class, 'index']);
+
+// Rute untuk halaman Syarat Perizinan
+Route::get('/syarat-perizinan', function () {
+    return view('pages.syarat-perizinan');
+})->name('syarat-perizinan');
+// RUTE BARU untuk halaman Cara Mendaftar
+Route::get('/cara-mendaftar', function () {
+    return view('pages.cara-mendaftar');
+})->name('cara-mendaftar');
+
+Route::get('/faq', [FaqController::class, 'index'])->name('faq');
