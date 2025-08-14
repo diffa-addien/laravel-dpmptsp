@@ -98,7 +98,7 @@
       <i class="fas fa-quote-right fa-2x text-green-500"></i>
       <span class="mt-2 block font-semibold text-gray-600 text-sm">VERIFIKASI SK</span>
       </a>
-      <a href="#"
+      <a href="{{ route('sdm') }}"
       class="bg-white rounded-lg shadow p-4 text-center hover:shadow-xl hover:-translate-y-1 transform transition-all duration-300">
       <i class="fas fa-user-tie fa-2x text-green-500"></i>
       <span class="mt-2 block font-semibold text-gray-600 text-sm">SDM</span>
@@ -135,7 +135,8 @@
       <a href="#" class="block bg-white p-4 rounded-lg shadow hover:bg-gray-50 transition">
       <p class="font-semibold text-gray-700">{{ $berita->title }}</p>
       <p class="text-sm text-gray-500">Dipublikasikan pada
-      {{ \Carbon\Carbon::parse($berita->published_at)->translatedFormat('d F Y') }}</p>
+      {{ \Carbon\Carbon::parse($berita->published_at)->translatedFormat('d F Y') }}
+      </p>
       </a>
     @empty
       <div class="bg-white p-4 rounded-lg shadow text-center text-gray-500">

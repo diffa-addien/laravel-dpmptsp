@@ -3,6 +3,7 @@
 use App\Http\Controllers\BerandaController;
 use App\Http\Controllers\DetailPerizinanController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\SdmController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,3 +29,5 @@ Route::get('/cara-mendaftar', function () {
 })->name('cara-mendaftar');
 
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
+
+Route::get('/struktur-organisasi', [SdmController::class, 'index'])->name('sdm');
