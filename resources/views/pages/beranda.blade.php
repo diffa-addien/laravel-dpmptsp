@@ -48,11 +48,11 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-      <a href="#"
+      <a href="https://www.lapor.go.id/" target="_blank"
       class="bg-indigo-500 text-white p-6 rounded-lg shadow-lg flex justify-between items-center hover:bg-indigo-600 transition-colors duration-300">
       <div>
         <span class="font-bold text-2xl block">SP4N - LAPOR</span>
-        <span class="text-sm">PENGADUAN ONLINE</span>
+        <span class="text-sm">PENGADUAN NASIONAL</span>
       </div>
       <i class="fas fa-desktop fa-3x text-white/50"></i>
       </a>
@@ -64,7 +64,7 @@
       </div>
       <i class="fas fa-chart-bar fa-3x text-white/50"></i>
       </a>
-      <a href="#"
+      <a href="{{ route('berita.index') }}"
       class="bg-orange-500 text-white p-6 rounded-lg shadow-lg flex justify-between items-center hover:bg-orange-600 transition-colors duration-300">
       <div>
         <span class="font-bold text-2xl block">BERITA</span>
@@ -88,7 +88,7 @@
       <i class="fas fa-comments fa-2x text-green-500"></i>
       <span class="mt-2 block font-semibold text-gray-600 text-sm">FAQ</span>
       </a>
-      <a href="#"
+      <a href="{{ route('halaman.show', ['slug' => 'janji-layanan']) }}"
       class="bg-white rounded-lg shadow p-4 text-center hover:shadow-xl hover:-translate-y-1 transform transition-all duration-300">
       <i class="fas fa-handshake fa-2x text-green-500"></i>
       <span class="mt-2 block font-semibold text-gray-600 text-sm">JANJI LAYANAN</span>
@@ -103,7 +103,7 @@
       <i class="fas fa-user-tie fa-2x text-green-500"></i>
       <span class="mt-2 block font-semibold text-gray-600 text-sm">SDM</span>
       </a>
-      <a href="#"
+      <a href="{{ route('halaman.show', ['slug' => 'alur-perizinan']) }}"
       class="bg-white rounded-lg shadow p-4 text-center hover:shadow-xl hover:-translate-y-1 transform transition-all duration-300">
       <i class="fas fa-arrows-spin fa-2x text-green-500"></i>
       <span class="mt-2 block font-semibold text-gray-600 text-sm">ALUR PERIZINAN</span>
