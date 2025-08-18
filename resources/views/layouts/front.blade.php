@@ -28,10 +28,9 @@
             </div>
             <div class="hidden md:flex items-center space-x-6">
                 <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="/">Beranda</a>
-                <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="#">Profil</a>
-                <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="#">Layanan</a>
-                <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="#">Informasi</a>
-                <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="#">Galeri</a>
+                <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="{{ url('struktur-organisasi') }}">Profil</a>
+                <!-- <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="#">Layanan</a> -->
+                <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="{{ url('berita') }}">Berita</a>
                 <a class="py-2 px-3 text-gray-600 hover:text-indigo-600" href="#">Kontak</a>
             </div>
             <div class="md:hidden flex items-center">
