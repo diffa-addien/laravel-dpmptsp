@@ -159,7 +159,7 @@
       <h2 class="text-2xl font-bold text-gray-800 mb-4">Berita Terbaru</h2>
       <div class="h-[320px] md:h-[350px] lg:h-full max-h-[415px] space-y-4 pr-2 overflow-y-auto">
       @forelse ($latestBerita as $berita)
-      <a href="#" class="block bg-white p-4 rounded-lg shadow hover:bg-gray-50 transition">
+      <a href="{{ route('berita.show', ['slug' => $berita->slug]) }}" class="block bg-white p-4 rounded-lg shadow hover:bg-gray-50 transition">
       <p class="font-semibold text-gray-700">{{ $berita->title }}</p>
       <p class="text-sm text-gray-500">Dipublikasikan pada
       {{ \Carbon\Carbon::parse($berita->published_at)->translatedFormat('d F Y') }}
