@@ -6,6 +6,7 @@ use App\Http\Controllers\FaqController;
 use App\Http\Controllers\SdmController;
 use App\Http\Controllers\BeritaController; 
 use App\Http\Controllers\HalamanController;
+use App\Http\Controllers\VisitorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +37,4 @@ Route::get('/struktur-organisasi', [SdmController::class, 'index'])->name('sdm')
 Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
 Route::get('/berita/{slug}', [BeritaController::class, 'show'])->name('berita.show');
 Route::get('/halaman/{slug}', [HalamanController::class, 'show'])->name('halaman.show');
+Route::post('/api/ping-visit', [VisitorController::class, 'ping']);
