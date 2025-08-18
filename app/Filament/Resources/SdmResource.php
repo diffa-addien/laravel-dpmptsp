@@ -20,6 +20,9 @@ class SdmResource extends Resource
 
     protected static ?string $navigationGroup = 'Manajemen Utama';
 
+    protected static ?string $navigationLabel = 'SDM';
+    protected static ?string $pluralModelLabel = 'SDM';
+
     public static function form(Form $form): Form
     {
         return $form
@@ -108,8 +111,8 @@ class SdmResource extends Resource
     {
         return [
             'index' => Pages\ListSdms::route('/'),
-            'create' => Pages\CreateSdm::route('/create'),
-            'edit' => Pages\EditSdm::route('/{record}/edit'),
+            // 'create' => Pages\CreateSdm::route('/create'),
+            // 'edit' => Pages\EditSdm::route('/{record}/edit'),
         ];
     }
 }

@@ -21,6 +21,9 @@ class FaqResource extends Resource
     // Dimasukkan ke grup Manajemen Konten bersama Berita
     protected static ?string $navigationGroup = 'Manajemen Konten';
 
+    protected static ?string $navigationLabel = 'FAQ';
+    protected static ?string $pluralModelLabel = 'FAQ';
+
     public static function form(Form $form): Form
     {
         return $form

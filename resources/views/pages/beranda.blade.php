@@ -2,15 +2,42 @@
 
 @section('content')
 
-  <section class="bg-cover bg-center h-96 text-white flex items-center justify-center"
-    style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2084&auto=format&fit=crop')">
-    <div class="bg-black bg-opacity-50 p-10 rounded-lg text-center">
-    <h1 class="text-4xl md:text-5xl font-bold mb-4">DPMPTSP Halmahera Timur</h1>
-    <p class="text-xl">Mewujudkan Pelayanan Publik yang Prima dan Pro Investasi</p>
-    </div>
-  </section>
+  {{-- GANTI SELURUH SECTION HERO LAMA DENGAN INI --}}
+  {{-- Tampilan Slider Baru yang Lebih Sederhana --}}
+  @if($sliders->isNotEmpty())
+    <section class="relative w-full max-w-7xl mt-10 border border-1 mx-auto h-[350px] md:h-[400px] lg:h-[500px] rounded-md overflow-hidden shadow-lg mb-12" x-data="{ 
+      activeSlide: 1, 
+      totalSlides: {{ $sliders->count() }},
+      autoplay() {
+        setInterval(() => { 
+        this.activeSlide = this.activeSlide === this.totalSlides ? 1 : this.activeSlide + 1 
+        }, 5000);
+      }
+      }" x-init="autoplay()">
 
-  <section class="mb-16 -mt-14">
+    @foreach($sliders as $slider)
+    <div x-show="activeSlide === {{ $loop->iteration }}" x-transition:enter="transition ease-in-out duration-1000"
+    x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
+    x-transition:leave="transition ease-in-out duration-1000" x-transition:leave-start="opacity-100"
+    x-transition:leave-end="opacity-0" class="absolute inset-0">
+
+    <img src="{{ $slider->getFirstMediaUrl('slider_image') }}" alt="Slider Image {{ $loop->iteration }}"
+      class="w-full h-full object-cover">
+    </div>
+    @endforeach
+
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex space-x-3">
+    @foreach($sliders as $slider)
+    <button @click="activeSlide = {{ $loop->iteration }}" class="w-3 h-3 rounded-full transition-colors"
+      :class="{ 'bg-white shadow': activeSlide === {{ $loop->iteration }}, 'bg-white/50 hover:bg-white': activeSlide !== {{ $loop->iteration }} }">
+    </button>
+    @endforeach
+    </div>
+    </section>
+  @endif
+
+
+  <section class="mb-16 mt-10">
     <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-4">
       <a href="{{ route('syarat-perizinan') }}"
