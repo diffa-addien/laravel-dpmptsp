@@ -102,7 +102,29 @@ class HalamanResource extends Resource
 
     public static function table(Table $table): Table
     {
+        $headerHtml = new HtmlString(
+            '<div class="p-4 bg-yellow-100 border border-yellow-300 rounded-t-lg mb-6">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0">
+                        <i class="fas fa-exclamation-triangle text-yellow-500 mt-1"></i>
+                    </div>
+                    <div class="ml-3">
+                        <h3 class="text-sm font-bold text-yellow-800">Perhatian</h3>
+                        <div class="mt-1 text-sm text-yellow-700">
+                            <p>
+                                Data pada tabel ini digunakan untuk mengisi konten halaman statis di sisi publik. Beberapa halaman (seperti \'Sejarah Singkat\' atau \'Alur Perizinan\') mungkin terhubung langsung dari menu navigasi utama.
+                            </p>
+                            <p class="mt-2">
+                                Menghapus data di sini akan menyebabkan link terkait di halaman depan menjadi rusak (error 404).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>'
+        );
+
         return $table
+             ->header($headerHtml)
             ->columns([
                 Tables\Columns\TextColumn::make('title')
                     ->label('Judul')
