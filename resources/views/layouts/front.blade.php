@@ -34,8 +34,15 @@
                             <i class="fas fa-building fa-fw mr-2"></i> Profile <i class="fas fa-chevron-down text-xs ml-2"></i>
                         </button>
                         <div x-show="dropdownOpen" class="absolute left-0 mt-2 py-2 w-48 bg-gray-700 rounded-md shadow-xl z-20" style="display: none;">
+                           <a href="{{ route('halaman.show', ['slug' => 'sejarah-singkat']) }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Sejarah Singkat</a>
+                            <a href="{{ route('halaman.show', ['slug' => 'visi-misi-dan-moto']) }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Visi, Misi dan Moto</a>
+                            <a href="{{ route('halaman.show', ['slug' => 'tupoksi']) }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Tupoksi</a>
+                            <a href="{{ route('halaman.show', ['slug' => 'maklumat-layanan']) }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Maklumat Layanan</a>
                             <a href="{{ route('sdm') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Struktur Organisasi</a>
-                            <a href="{{ route('halaman.show', ['slug' => 'visi-misi']) }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Visi & Misi</a>
+                            <a href="{{ route('sdm') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Sumberdaya Manusia</a>
+                            <a href="{{ route('halaman.show', ['slug' => 'sarana-dan-prasarana']) }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Sarana dan Prasarana</a>
+                            <a href="{{ route('halaman.show', ['slug' => 'penghargaan-dan-prestasi']) }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Penghargaan & Prestasi</a>
+                            <a href="{{ route('halaman.show', ['slug' => 'inovasi']) }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Inovasi</a>
                         </div>
                     </div>
 
@@ -44,8 +51,10 @@
                             <i class="fas fa-file-signature fa-fw mr-2"></i> Perizinan <i class="fas fa-chevron-down text-xs ml-2"></i>
                         </button>
                         <div x-show="dropdownOpen" class="absolute left-0 mt-2 py-2 w-48 bg-gray-700 rounded-md shadow-xl z-20" style="display: none;">
-                            <a href="{{ route('syarat-perizinan') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Cek Syarat Izin</a>
-                            <a href="{{ route('cara-mendaftar') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Cek Cara Mendaftar</a>
+
+                <a href="{{ route('perizinan.daftar') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Jenis Izin dan Non Izin</a>
+                            <a href="{{ route('syarat-perizinan') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Syarat Izin dan Non Izin</a>
+                            <a href="{{ route('cara-mendaftar') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Cara Permohonan Izin</a>
                         </div>
                     </div>
 
@@ -94,6 +103,7 @@
                 <a class="block py-2 px-3 hover:bg-gray-700 hover:text-white rounded-md transition-colors" href="{{ route('sdm') }}">Struktur Organisasi</a>
                 <a class="block py-2 px-3 hover:bg-gray-700 hover:text-white rounded-md transition-colors" href="{{ route('halaman.show', ['slug' => 'visi-misi']) }}">Visi & Misi</a>
                 <h3 class="px-3 pt-2 text-xs text-gray-400 uppercase font-bold">Perizinan</h3>
+                <a href="{{ route('perizinan.daftar') }}" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Jenis Izin dan Non Izin</a>
                 <a class="block py-2 px-3 hover:bg-gray-700 hover:text-white rounded-md transition-colors" href="{{ route('syarat-perizinan') }}">Cek Syarat Izin</a>
                 <a class="block py-2 px-3 hover:bg-gray-700 hover:text-white rounded-md transition-colors" href="{{ route('cara-mendaftar') }}">Cek Cara Mendaftar</a>
                 <h3 class="px-3 pt-2 text-xs text-gray-400 uppercase font-bold">Informasi Publik</h3>

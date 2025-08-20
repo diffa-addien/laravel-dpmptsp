@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class KategoriPerizinan extends Model
 {
@@ -17,4 +18,10 @@ class KategoriPerizinan extends Model
         'slug',
         'description',
     ];
+
+    public function perizinans(): HasMany
+    {
+        // Nama foreign key (kategori_perizinan_id) akan otomatis dideteksi oleh Laravel
+        return $this->hasMany(Perizinan::class, 'kategori_perizinan_id');
+    }
 }

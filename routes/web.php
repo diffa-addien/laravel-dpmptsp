@@ -43,3 +43,6 @@ Route::post('/api/ping-visit', [VisitorController::class, 'ping']);
 Route::get('/galeri', [GaleriPublikController::class, 'index'])->name('galeri.index');
 Route::get('/investasi', [PeluangInvestasiController::class, 'index'])->name('investasi.index');
 Route::get('/investasi/{slug}', [PeluangInvestasiController::class, 'show'])->name('investasi.show');
+Route::get('/daftar-perizinan', function () {
+    return view('pages.daftar-perizinan');
+})->name('perizinan.daftar');

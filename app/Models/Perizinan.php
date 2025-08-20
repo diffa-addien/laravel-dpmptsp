@@ -18,10 +18,12 @@ class Perizinan extends Model
         'how_to_register', // <-- TAMBAHKAN INI
         'processing_time',
         'fee',
+        'is_published'
     ];
 
     public function kategoriPerizinan(): BelongsTo
     {
         return $this->belongsTo(KategoriPerizinan::class);
     }
+
 }

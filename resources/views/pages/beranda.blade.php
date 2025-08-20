@@ -48,7 +48,7 @@
       </a>
       <a href="{{ route('cara-mendaftar') }}"
       class="bg-red-500 text-white p-6 rounded-sm shadow-md flex justify-between items-center hover:bg-red-600 hover:shadow-lg transition-all duration-300">
-      <div><span class="font-bold text-2xl block">DAFTAR</span><span class="text-sm">PENDAFTARAN ONLINE</span></div><i class="fas fa-edit fa-3x text-white/50"></i>
+      <div><span class="font-bold text-2xl block">DAFTAR</span><span class="text-sm">Cara Pendaftaran</span></div><i class="fas fa-edit fa-3x text-white/50"></i>
       </a>
       <a href="#"
       class="bg-green-500 text-white p-6 rounded-sm shadow-md flex justify-between items-center hover:bg-green-600 hover:shadow-lg transition-all duration-300">

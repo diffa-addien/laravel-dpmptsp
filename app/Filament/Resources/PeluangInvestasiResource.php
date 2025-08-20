@@ -19,6 +19,9 @@ class PeluangInvestasiResource extends Resource
     protected static ?string $navigationIcon = 'heroicon-o-rocket-launch';
     protected static ?string $navigationGroup = 'Manajemen Utama';
 
+    protected static ?string $pluralModelLabel = 'Peluang Investasi';
+
+
     public static function form(Form $form): Form
     {
         return $form
