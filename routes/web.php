@@ -7,6 +7,8 @@ use App\Http\Controllers\SdmController;
 use App\Http\Controllers\BeritaController; 
 use App\Http\Controllers\HalamanController;
 use App\Http\Controllers\VisitorController;
+use App\Http\Controllers\GaleriPublikController;
+use App\Http\Controllers\PeluangInvestasiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -38,3 +40,6 @@ Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
 Route::get('/berita/{slug}', [BeritaController::class, 'show'])->name('berita.show');
 Route::get('/halaman/{slug}', [HalamanController::class, 'show'])->name('halaman.show');
 Route::post('/api/ping-visit', [VisitorController::class, 'ping']);
+Route::get('/galeri', [GaleriPublikController::class, 'index'])->name('galeri.index');
+Route::get('/investasi', [PeluangInvestasiController::class, 'index'])->name('investasi.index');
+Route::get('/investasi/{slug}', [PeluangInvestasiController::class, 'show'])->name('investasi.show');
