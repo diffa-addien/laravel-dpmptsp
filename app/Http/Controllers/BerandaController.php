@@ -10,10 +10,10 @@ class BerandaController extends Controller
 {
     public function index()
     {
-         $sliders = Slider::where('is_published', true)
-                        ->orderBy('sequence', 'asc')
-                        ->take(3)
-                        ->get();
+        $sliders = Slider::where('is_published', true)
+            ->orderBy('sequence', 'asc')
+            ->take(3)
+            ->get();
 
         // Mengambil 4 berita terbaru yang sudah dipublikasikan
         $latestBerita = Berita::where('is_published', true)
@@ -26,7 +26,9 @@ class BerandaController extends Controller
             ->latest()
             ->first();
 
-        $galleryImages = $galleryBerita ? $galleryBerita->getMedia('berita_images') : [];
+        $galleryImages = $galleryBerita
+            ? $galleryBerita->getMedia('berita_images')
+            : collect();
 
         // Kirim semua data ke view 'pages.beranda'
         return view('pages.beranda', [

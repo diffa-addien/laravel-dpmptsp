@@ -80,8 +80,8 @@ class PeluangInvestasiResource extends Resource
     {
         return [
             'index' => Pages\ListPeluangInvestasis::route('/'),
-            'create' => Pages\CreatePeluangInvestasi::route('/create'),
-            'edit' => Pages\EditPeluangInvestasi::route('/{record}/edit'),
+            // 'create' => Pages\CreatePeluangInvestasi::route('/create'),
+            // 'edit' => Pages\EditPeluangInvestasi::route('/{record}/edit'),
         ];
     }    
 }

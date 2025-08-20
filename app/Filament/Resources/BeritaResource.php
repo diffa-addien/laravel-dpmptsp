@@ -142,8 +142,8 @@ class BeritaResource extends Resource
     {
         return [
             'index' => Pages\ListBeritas::route('/'),
-            'create' => Pages\CreateBerita::route('/create'),
-            'edit' => Pages\EditBerita::route('/{record}/edit'),
+            // 'create' => Pages\CreateBerita::route('/create'),
+            // 'edit' => Pages\EditBerita::route('/{record}/edit'),
         ];
     }
 }
