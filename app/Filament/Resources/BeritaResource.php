@@ -68,7 +68,7 @@ class BeritaResource extends Resource
                     Forms\Components\Section::make('Status')->schema([
                         Forms\Components\Toggle::make('is_published')
                             ->label('Publikasikan')
-                            ->default(false),
+                            ->default(true),
 
                         Forms\Components\DatePicker::make('published_at')
                             ->label('Tanggal Publikasi')
