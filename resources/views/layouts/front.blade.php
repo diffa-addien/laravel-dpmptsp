@@ -152,7 +152,7 @@
                         <div x-show="dropdownOpen"
                             class="absolute right-0 mt-2 py-2 w-48 bg-gray-700 rounded-md shadow-xl z-20"
                             style="display: none;">
-                            <a href="#"
+                            <a href="{{ route('kontak') }}"
                                 class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Informasi
                                 Kontak</a>
                             <a href="#"
@@ -201,13 +201,6 @@
     <main>
         @yield('content')
     </main>
-
-    <div class="w-full md:w-1/4 px-4 text-center md:text-left mb-8">
-    <h5 class="uppercase mb-6 font-bold">Kontak</h5>
-    <p class="text-gray-400"><i class="fa fa-map-marker-alt mr-2"></i> {{ $profilDinas->address }}</p>
-    <p class="text-gray-400"><i class="fa fa-phone mr-2"></i> {{ $profilDinas->phone }}</p>
-    <p class="text-gray-400"><i class="fa fa-envelope mr-2"></i> {{ $profilDinas->email }}</p>
-</div>
 
     <footer class="bg-gray-800 text-white mt-16">
         <div class="container mx-auto px-6 pt-10 pb-6">

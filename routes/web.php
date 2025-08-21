@@ -9,6 +9,7 @@ use App\Http\Controllers\HalamanController;
 use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\GaleriPublikController;
 use App\Http\Controllers\PeluangInvestasiController;
+use App\Http\Controllers\KontakController; 
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -46,3 +47,4 @@ Route::get('/investasi/{slug}', [PeluangInvestasiController::class, 'show'])->na
 Route::get('/daftar-perizinan', function () {
     return view('pages.daftar-perizinan');
 })->name('perizinan.daftar');
+Route::get('/kontak', [KontakController::class, 'index'])->name('kontak');
