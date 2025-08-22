@@ -18,7 +18,7 @@ class SdmResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
 
-    protected static ?string $navigationGroup = 'Manajemen Utama';
+    protected static ?string $navigationGroup = 'Pengaturan';
 
     protected static ?string $navigationLabel = 'SDM';
     protected static ?string $pluralModelLabel = 'SDM';
