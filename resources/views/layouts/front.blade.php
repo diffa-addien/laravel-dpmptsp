@@ -129,6 +129,12 @@
                             style="display: none;">
                             <a href="{{ route('berita.index') }}"
                                 class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Berita</a>
+
+                            <a href="{{ route('dokumen.perencanaan') }}"
+                                class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Dokumen
+                                Perencanaan</a>
+                            <a href="{{ route('dokumen.regulasi') }}"
+                                class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Regulasi</a>
                             <a href="{{ route('galeri.index') }}"
                                 class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-600 hover:text-white">Galeri</a>
                             <a href="{{ route('faq') }}"

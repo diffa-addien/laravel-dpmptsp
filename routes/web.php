@@ -10,6 +10,7 @@ use App\Http\Controllers\VisitorController;
 use App\Http\Controllers\GaleriPublikController;
 use App\Http\Controllers\PeluangInvestasiController;
 use App\Http\Controllers\KontakController; 
+use App\Http\Controllers\DokumenPublikController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,3 +49,5 @@ Route::get('/daftar-perizinan', function () {
     return view('pages.daftar-perizinan');
 })->name('perizinan.daftar');
 Route::get('/kontak', [KontakController::class, 'index'])->name('kontak');
+Route::get('/dokumen/regulasi', [DokumenPublikController::class, 'regulasi'])->name('dokumen.regulasi');
+Route::get('/dokumen/perencanaan', [DokumenPublikController::class, 'perencanaan'])->name('dokumen.perencanaan');
